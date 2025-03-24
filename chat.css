@@ -1,0 +1,64 @@
+/* Style for open chat button with an icon */
+#open-chat-btn {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: #88b8da;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 24px;
+    z-index: 1001;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Hidden chat container initially */
+#chat-container {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1000;
+    display: none; /* Chat container is hidden initially */
+    width: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Chat box styles */
+#chat-box {
+    width: 100%;
+    height: 400px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header style */
+#chat-header {
+    background-color: #88b8da;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Input box and button styles */
+#chat-input {
+    width: 80%;
+    padding: 10px;
+    border: none;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+#send-btn {
+    width: 15%;
+    padding: 10px;
+    border: none;
+    background-color: #88b8da;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}

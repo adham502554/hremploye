@@ -1,0 +1,410 @@
+/* استعادة القيم الافتراضية */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+    direction: rtl;
+}
+
+/* تنسيق الترويسة */
+header {
+    background-color: #2d3e50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #f39c12;
+}
+
+/* الصفحة الرئيسية */
+.main-content {
+    text-align: center;
+    padding: 50px 20px;
+}
+a {
+    text-decoration: none; /* إزالة الخط تحت الرابط */
+    color: #010102; /* يمكنك اختيار أي لون تريده هنا */
+}
+
+.main-content h1 {
+    font-size: 2.5em;
+    color: #030405;
+    margin-bottom: 20px;
+}
+
+.main-content p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+button {
+    background-color: #88b8da;
+    color: rgb(0, 0, 0);
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #3c4eaa;
+}
+
+button:active {
+    background-color: #526edd;
+}
+
+/* قسم "حول" */
+.about {
+    background-color: #2d3e50;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.about h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* تذييل الموقع */
+footer {
+    background-color: #2d3e50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* تصميم متجاوب */
+@media screen and (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    .button-container {
+        flex-direction: column;
+    }
+
+    button {
+        padding: 15px 30px;
+        font-size: 18px;
+    }
+}
+
+/* تأثير fadeIn لكافة العناصر */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* تأثير slideUp للعناصر */
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* تطبيق الأنيميشن على جميع العناصر */
+body, .container, .page-title, .description, .buttons .btn {
+    animation: fadeIn 1s ease-out;
+}
+
+/* إضافة الأنيميشن للعناصر المنبثقة بشكل منفصل */
+.page-title {
+    animation: fadeIn 1.5s ease-out;
+}
+
+.description {
+    animation: fadeIn 1.5s ease-out 0.5s forwards;
+}
+
+.buttons .btn {
+    animation: slideUp 1.5s ease-out 1s forwards;
+}
+
+/* إضافة تأثير الأنيميشن على الأزرار عند التفاعل */
+.buttons .btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+/* تصميم الأزرار بشكل مميز مع تأثيرات اللون */
+.buttons .btn {
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    background-color: #4CAF50;  /* اللون الأخضر */
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.buttons .btn:hover {
+    background-color: #45a049; /* تغيير اللون عند المرور */
+    transform: scale(1.1); /* تكبير الزر قليلاً عند المرور */
+}
+
+.buttons .btn:active {
+    background-color: #388e3c; /* تغيير اللون عند الضغط */
+    transform: scale(1); /* عودة الزر إلى حجمه الطبيعي عند الضغط */
+}
+
+.buttons .btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* تأثير عند التحديد */
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 2px solid #4caf4f00; /* الإطار ذو اللون الأخضر */
+    border-radius: 10px; /* زوايا مدورة للإطار */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ظل خفيف للإطار */
+    background-color: #fff; /* خلفية بيضاء */
+}
+/* تنسيق صفحة حول */
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.about-container h1 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.about-container p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.5;
+}
+/* تنسيق الحاوية */
+.chat-container {
+    width: 300px;
+    height: 400px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none; /* تبدأ مخفية */
+    flex-direction: column;
+    z-index: 1000;
+  }
+  
+  /* صندوق الرسائل */
+  .chat-box {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    height: 85%;
+  }
+  
+  /* الرسائل الفردية */
+  .chat-message {
+    padding: 8px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+  }
+  
+  .chat-message.bot {
+    background-color: #e1f5fe;
+  }
+  
+  .chat-message.user {
+    background-color: #c8e6c9;
+    text-align: right;
+  }
+  
+  /* حقل الإدخال */
+  #chatInput {
+    width: calc(100% - 60px);
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  /* زر الإرسال */
+  #sendButton {
+    width: 50px;
+    height: 40px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* زر إغلاق الدردشة */
+  #closeChat {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  
+  /* زر فتح الدردشة */
+  #openChatBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+  }
+/* إضافة صورة كخلفية */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: url('') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.content {
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  
+  /* جعل الصور متجاوبة */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* تحسين الأزرار */
+  button {
+    width: 100%;
+    max-width: 200px;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  /* تنسيق الصفحة الرئيسية */
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  /* استخدام Media Queries لتعديل التصميم على الشاشات الصغيرة */
+  @media (max-width: 768px) {
+    .container {
+      width: 95%;
+    }
+  
+    h1 {
+      font-size: 22px;
+    }
+  
+    button {
+      font-size: 14px;
+    }
+  }
+   

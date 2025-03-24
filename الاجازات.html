@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>طلب الإجازة</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- إشعار -->
+    <div id="notification" class="notification">
+        <span id="notificationMessage">تمت العملية بنجاح!</span>
+    </div>
+
+    <!-- نموذج طلب الإجازة -->
+    <div class="container">
+        <h2>طلب الإجازة</h2>
+        
+        <form id="leaveForm">
+            <label for="employeeNameLeave">اسم الموظف:</label>
+            <input type="text" id="employeeNameLeave" name="employeeNameLeave" required>
+
+            <label for="leaveType">نوع الإجازة:</label>
+            <select id="leaveType" name="leaveType">
+                <option value="sick">إجازة مرضية</option>
+                <option value="annual">إجازة سنوية</option>
+            </select>
+
+            <label for="startDate">تاريخ بداية الإجازة:</label>
+            <input type="date" id="startDate" name="startDate" required>
+
+            <label for="endDate">تاريخ نهاية الإجازة:</label>
+            <input type="date" id="endDate" name="endDate" required>
+
+            <button type="submit">تقديم طلب الإجازة</button>
+        </form>
+
+        
+    </div>
+
+    <script src="leaveScript.js"></script>
+</body>
+</html>

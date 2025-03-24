@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الحضور والانصراف</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- إشعار -->
+    <div id="notification" class="notification">
+        <span id="notificationMessage">تمت العملية بنجاح!</span>
+    </div>
+
+    <!-- نموذج تسجيل الحضور والانصراف -->
+    <div class="container">
+        <h2>تسجيل الحضور والانصراف</h2>
+        
+        <!-- نموذج تسجيل الحضور -->
+        <div class="form-container">
+            <h3>تسجيل الحضور</h3>
+            <form id="attendanceForm">
+                <label for="employeeName">اسم الموظف:</label>
+                <input type="text" id="employeeName" name="employeeName" required>
+                <button type="submit">تسجيل الحضور</button>
+            </form>
+        </div>
+
+        <!-- نموذج تسجيل الانصراف -->
+        <div class="form-container">
+            <h3>تسجيل الانصراف</h3>
+            <form id="departureForm">
+                <label for="employeeNameDeparture">اسم الموظف:</label>
+                <input type="text" id="employeeNameDeparture" name="employeeNameDeparture" required>
+                <button type="submit">تسجيل الانصراف</button>
+            </form>
+        </div>
+
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
